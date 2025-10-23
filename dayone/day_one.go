@@ -15,7 +15,7 @@ import "fmt"
 // 	}
 // }
 
-//odd or even
+// odd or even
 
 // func main() {
 // 	var num int
@@ -28,7 +28,7 @@ import "fmt"
 // 	}
 // }
 
-//switch calculator
+// switch calculator
 
 func main() {
 	var n1, n2 int
