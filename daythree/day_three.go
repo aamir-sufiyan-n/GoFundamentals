@@ -5,18 +5,16 @@ import (
 	"math"
 )
 
-func noDuplicates(nums []int) []int {
+func noDuplicates(nums []int )[]int{
+	exist:=make(map[int]bool)
+	result:=[]int{}
 
-	exist := make(map[int]bool)
-	result := []int{}
-
-	for _, num := range nums {
-		if !exist[num] {
-			exist[num] = true
-			result = append(result, num)
+	for _,n:= range nums{
+		if !exist[n]{
+			exist[n]=true
+			result = append(result, n)
 		}
 	}
-
 	return result
 }
 
@@ -56,6 +54,8 @@ func main() {
 	
 
 
-	numbers := []int{10,1,1,1,1,1,2,2,2,2,3,3,4,4,5,5,6,6,7,8,8,9,9}
+	numbers := []int{10,101,10}
+	a,b :=MaxMin(numbers)
+	fmt.Printf("Max : %d min : %d \n",a,b)
 	fmt.Println(noDuplicates(numbers))
 }
